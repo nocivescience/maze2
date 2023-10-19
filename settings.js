@@ -4,8 +4,17 @@ let rowsCols = document.querySelector("#number");
 let complete = document.querySelector(".complete");
 let replay = document.querySelector(".replay");
 let close = document.querySelector(".close");
+const topCount = document.querySelector(".top-count");
+const bottomCount = document.querySelector(".bottom-count");
+const leftCount = document.querySelector(".left-count");
+const rightCount = document.querySelector(".right-count");
 
 let newMaze;
+
+topCount.innerHTML = `hola`;
+bottomCount.innerHTML = `hola`;
+leftCount.innerHTML = `hola`;
+rightCount.innerHTML = `hola`;
 
 form.addEventListener("submit", generateMaze);
 document.addEventListener("keydown", move);
@@ -88,8 +97,3 @@ function move(e) {
       break;
   }
 }
-document.addEventListener("keydown", (e) => {
-  if (e.key == "j"||e.key == "J") {
-    goal=undefined;
-  }
-});
